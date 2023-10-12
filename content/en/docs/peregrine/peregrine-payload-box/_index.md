@@ -43,3 +43,30 @@ accept bolts from the outside to connect the two shells together.
 
 ### Copper foil wrapping
 
+Print out the cutout templates **TODO LINK**. The first two pages are the
+cutout templates for the copper foil wrapping on the top and bottom of the
+enclosure.
+
+{{% alert title="Double check the dimensions" color="warning" %}}
+Use a ruler to measure the marked dimensions on the first page to make sure your
+print is at the right scale.
+{{% /alert %}}
+
+Spread a layer of adhesive-backed copper out on a cutting-safe surface
+(such as a sacrificial piece of wood) and use some masking tape to hold it down.
+Tape the cutout template on top. Use an X-Acto knife (or similar) to cut:
+
+1. A small "X" across each of the external bolt holes (to allow a bolt to go
+through -- no need to try to cut out the circle itself)
+2. The internal cutout for the heatsink
+3. The exterior outline of the entire piece.
+
+If you're not sure which lines to cut, take a moment to see how the paper folds
+around the 3D printed pieces. Your goal is to fully cover the exterior.
+
+Carefully peel away the adhesive from part of the copper foil and start pasting
+it onto the 3D printed piece. It's easier to do this bit by bit, rather than
+pulling the entire backing off at once.
+
+Repeat with the other half of the enclosure.
+
