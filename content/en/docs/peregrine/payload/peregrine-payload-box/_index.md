@@ -1,5 +1,5 @@
 ---
-title: Peregrine Radar Payload Box
+title: Peregrine Radar Payload Box Assembly
 description: Build instructions for the core of the radar payload
 weight: 2
 resources:

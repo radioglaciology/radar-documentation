@@ -1,6 +1,6 @@
 ---
-title: Peregrine UAS
-description: Details about the Peregrine UAS
+title: Peregrine Payload
+description: Details about the Peregrine Radar Payload
 weight: 10
 ---
 

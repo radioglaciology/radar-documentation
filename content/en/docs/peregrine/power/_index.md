@@ -1,7 +1,7 @@
 ---
 title: 5V Power Board and Power Harnesses
 description: Build instructions for 5V power system
-weight: 2
+weight: 50
 resources:
   - src: "*.{png,jpg}"
 ---
