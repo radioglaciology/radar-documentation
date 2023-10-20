@@ -4,3 +4,30 @@ Add styles or override variables from the theme here.
 
 */
 
+.highlight span span span:last-child {
+    display: none;
+}
+
+.highlight {
+    max-height: 50vh;
+}
+
+.td-sidebar-nav .td-sidebar-link__page span {
+    color: #212529;
+    font-weight: 500;
+}
+
+.td-sidebar-nav a.active span{
+    font-weight: 700;
+}
+
+// .td-sidebar-link {
+//     display: block;
+//     padding-bottom: 0.375rem;
+
+//     &__page {
+//       /*color: $gray-700;*/
+//       color: #212529;
+//       font-weight: 500;
+//     }
+//   }
