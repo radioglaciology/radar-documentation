@@ -5,3 +5,5 @@ title: Radar Service Setup
 ---
 
 TODO
+
+[Useful reference for conda environments with services](https://github.com/mmaz/systemd-conda)
