@@ -51,6 +51,16 @@ Example laptop configuration to connect to the Pi over an ethernet cable
 
 ### Sharing internet from your computer
 
+{{% alert title="Do you need to do this?" color="info" %}}
+This process is a little annoying to setup. If you can easily connect your Pi
+to a separate WiFi network with internet access, you probably don't need to do this.
+
+If your WiFi network requires complicated configuration to join, requires a key
+or password you don't want to leave around on the Pi, or only allows some devices
+to join, this is an alternative approach that only requires a separate computer
+(i.e. your laptop) to have internet access.
+{{% /alert %}}
+
 Sharing your computer's internet connection from one network interface to another
 is a useful trick to get an internet connection for the Pi. This can be done
 between any two network interfaces (i.e. from your WiFi connection to the Pi over
@@ -60,6 +70,9 @@ The Arch Linux wiki has useful instructions for configuring
 [internet sharing on Linux](https://wiki.archlinux.org/title/Internet_sharing).
 
 To briefly summarize them:
+
+All of this setup will happen on your laptop (or whatever computer has an
+internet connection).
 
 1. Enable IPv4 forwarding: `sudo sysctl net.ipv4.ip_forward=1`
 2. Setup NAT with iptables: (See note below if you have docker installed!)
@@ -71,7 +84,9 @@ sudo iptables -A FORWARD -i net0 -o wlan0 -j ACCEPT
 ```
 
 Where `wlan0` should be replaced with the name of the network interface on
-your computer which is currently connected to the internet.
+your computer which is currently connected to the internet, and `net0` should
+be replaced with the name of the network interface on the same computer which is
+connected to the Pi.
 
 {{% alert title="Note for Docker users" color="warning" %}}
 If you have docker installed on your system, it

@@ -17,17 +17,18 @@ Setup of the Raspberry Pi is semi-automated using [cloud-init](https://cloudinit
 ### Cloud-init customization
 
 The cloud-init setup is controlled by two files: `user-data` and `network-config`.
-Examples of each are shown below, but you will likely need to modify these to suit
-your purpose:
+(You'll use these files a couple of steps down.)
 
-{{< tabpane text=true >}}
-  {{< tab header="user-data" >}}
-    {{< readfile file="/static/cloud-init/user-data" code="true" lang="yaml" >}}
-  {{< /tab >}}
-  {{< tab header="network-config" >}}
-    {{< readfile file="/static/cloud-init/network-config" code="true" lang="yaml" >}}
-  {{< /tab >}}
-{{< /tabpane >}}
+Examples of each are shown below, but you will likely need to modify these to suit
+your purpose. We have pages on how to customize
+[user-data]({{< ref "user-data-config" >}}) and
+[network-config]({{< ref "pi-internet" >}}).
+
+#### user-data Example
+{{< readfile file="/static/cloud-init/user-data" code="true" lang="yaml" >}}
+
+### network-config Example
+{{< readfile file="/static/cloud-init/network-config" code="true" lang="yaml" >}}
 
 ## Imaging your Pi
 
@@ -62,6 +63,8 @@ will not work.
 You want Ubuntu Server 22.04 LTS 64-bit.
 {{% /imgproc %}}
 
+Insert your MicroSD card and select it as the location to write to.
+
 After imaging is complete, you will see two drives mounted: `writable` and
 `system-boot`.
 
@@ -91,6 +94,8 @@ this to be ready.
 After the network setup is complete, you should be able to login over SSH.
 
 For instructions on SSH-ing into your Pi, see [here]({{< ref "connect-to-pi" >}}).
+In particular, please note that you need to have SSH agent forwarding working.
+Instructions for this are on that page.
 
 When you first login, cloud-init may not have finished running. To check the status, run:
 

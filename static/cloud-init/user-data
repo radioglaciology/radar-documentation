@@ -123,6 +123,7 @@ write_files:
 # Run arbitrary commands at rc.local like time
 # These commands are run with root permissions
 # If you want commands run as a normal user, put them in initial_setup.sh (see above)
+# which is run as the "ubuntu" user (see below)
 runcmd:
 - chown -R ubuntu:ubuntu /home/ubuntu
 - chmod +x /home/ubuntu/initial_setup.sh
@@ -136,4 +137,6 @@ runcmd:
 - echo "dtoverlay=i2c-rtc,pcf8523" >> /boot/firmware/config.txt
 - loginctl enable-linger ubuntu
 - mkdir /media/ssd
+- chown ubuntu /media/ssd
+- chgrp ubuntu /media/ssd
 - echo "/dev/sda2  /media/ssd  exfat  defaults,nofail,uid=1000,gid=1000  0  2" | tee -a /etc/fstab
